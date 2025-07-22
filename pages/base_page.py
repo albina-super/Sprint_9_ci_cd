@@ -59,4 +59,8 @@ class BasePage:
 
 
     def get_current_url(self):
+        initial_url = self.driver.current_url
+        WebDriverWait(self.driver, timeout=13).until(
+            lambda driver: driver.current_url != initial_url
+        )
         return self.driver.current_url

@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 
 
 class AuthorizationPageLocators:
-    CREATE_ACCOUNT_BUTTON = By.XPATH, "//button[contains(@class, 'style_link') and text()='Создать аккаунт']"
+    CREATE_ACCOUNT_BUTTON = By.XPATH, "//a[contains(@class, 'style_link') and text()='Создать аккаунт']"
     NAME_INPUT_FIELD = By.XPATH, "//input[@name='first_name']"
     LAST_NAME_INPUT_FIELD = By.XPATH, "//input[@name='last_name']"
     USERNAME_INPUT_FIELD = By.XPATH, "//input[@name='username']"
@@ -14,6 +14,7 @@ class AuthorizationPageLocators:
     SIGNIN_LINK = By.XPATH, '//a[text()="Войти"]'
     SIGNIN_CONFIRM_BUTTON = By.XPATH, '//button[@class="style_button__1FFWl styles_button__1jD3X style_button_style_dark-blue__1cpq7" and text()="Войти"]'
     LOGOUT_LINK = By.XPATH, '//a[contains(@class, "styles_menuLink") and text()="Выход"]'
+    MAIN_HEADER_TITLE = By.XPATH, '//h1[@class="styles_title__2fhty" and text()="Рецепты"]'
 
 
 

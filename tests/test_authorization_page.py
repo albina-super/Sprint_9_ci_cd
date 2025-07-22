@@ -17,5 +17,5 @@ class TestAuthorizationPage:
     def test_login_success(self, driver):
         user = AuthorizationPage(driver)
         user.login(MY_USER_DATA)
-        logout_link, url = user.check_login()
-        assert logout_link.is_displayed() and url == MAIN_PAGE_URL
+        logout_link, header = user.check_login()
+        assert logout_link.is_displayed() and header.text == "Рецепты"
